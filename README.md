@@ -1,6 +1,6 @@
 # Kalman Filter
 
-In this implementation, I try to generalize the Kalman function for higher dimensional estimations. 
+In this implementation, I try to utilize the Kalman function for higher dimensions through  estimations. 
 This results in some offset behavior, but ultimately the dynamic process is able to model the data effectively. 
 
 ## What is the Kalman Filter?
@@ -34,7 +34,7 @@ Essentially, it models the noisy observations then applies corrective prediction
 
 The filter successfully tracks the true signal regardless of noise with a 4-9% margin of error in these experiments.
 Importantly, there appears to be an offset in the prediction for the Kalman filter when noise is low or pulsed.
-This is likely due to the abstracted implementation process for the Kalman filter, regardless it remains close but offset.
+This is likely due to the implementation trying to handle higher dimensional proceses, regardless it remains close but offset.
 
 ## Conclusion
 
