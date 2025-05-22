@@ -1,5 +1,8 @@
 # Kalman Filter
 
+In this implementation, I try to generalize the Kalman function for higher dimensional estimations. 
+This results in some offset behavior, but ultimately the dynamic process is able to model the data effectively. 
+
 ## What is the Kalman Filter?
 
 **The Math:**
@@ -21,7 +24,7 @@ Essentially, it models the noisy observations then applies corrective prediction
 - Predict future values in time series
 - Filter out noise while preserving signal
 
-## Our Results
+## Results
 
 ![Kalman Filter Results](images/kalman_results.png "Kalman Filter Comparison Results")
 
@@ -30,11 +33,13 @@ Essentially, it models the noisy observations then applies corrective prediction
 3. **Pulse Noise**: Signal with random spikes
 
 The filter successfully tracks the true signal regardless of noise with a 4-9% margin of error in these experiments.
+Importantly, there appears to be an offset in the prediction for the Kalman filter when noise is low or pulsed.
+This is likely due to the abstracted implementation process for the Kalman filter, regardless it remains close but offset.
 
 ## Conclusion
 
 The Kalman filter provides optimal state estimation for linear systems.
-I encourage understanding this algorithm and its implications deeply, check references for resources
+I encourage understanding this algorithm and its implications deeply, check references for resources.
 
 
 ## Citation
@@ -50,7 +55,7 @@ If you use this code in your research, please cite:
 }
 ```
 
-## Reference
+## References
 
 Kalman, R.E. (1960). "A New Approach to Linear Filtering and Prediction Problems." *Journal of Basic Engineering*, 82(1), 35-45.
 
